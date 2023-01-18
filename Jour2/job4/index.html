@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Job4</title>
+</head>
+<body>
+<textarea id="keylogger"></textarea>
+<script>
+  document.addEventListener("keypress", function(event) {
+    var keylogger = document.getElementById("keylogger");
+    if (event.target === keylogger) {
+      keylogger.value += event.key + event.key;
+    } else {
+      keylogger.value += event.key;
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Job3</title>
+</head>
+<body>
+<button id="button">Click me</button>
+<p id="compteur">0</p>
+<script>
+    var button = document.getElementById("button");
+    var compteur = document.getElementById("compteur");
+
+    button.addEventListener("click", addone);
+
+    function addone() {
+        compteur.innerHTML = parseInt(compteur.innerHTML) + 1;
+    }
+</script>
+</body>
+</html>

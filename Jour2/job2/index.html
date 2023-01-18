@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Job2</title>
+</head>
+<body style="background-color: darkgray">
+<button id="button">Clique Ici</button>
+<article id="citation" style="display:none;">L'important n'est pas la chute, mais l'atterrissage.</article>
+
+<script>
+    function showhide() {
+        var article = document.getElementById("citation");
+        if(article.style.display === "none") {
+            article.style.display = "block";
+        } else {
+            article.style.display = "none";
+        }
+    }
+    document.getElementById("button").addEventListener("click", showhide);
+</script>
+
+</body>
+</html>
