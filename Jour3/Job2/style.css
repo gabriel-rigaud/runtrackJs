@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: steelblue;
+}
+
+.title{
+    background: tomato;
+    color: darkblue;
+    text-align: center;
+    padding: 30px;
+}
+
+#conteneur{
+    display: flex;
+}
+
+#conteneur img{
+    /*width: 100px;*/
+    /*height: 100px;*/
+    object-fit: cover;
+    margin: 10px;
+}
+
+#resultat{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+#resultat.gagne{
+    color: green;
+}
+
+#resultat.perdu{
+    color: red;
+}
+
+::selection{
+    background-color: black;
+    color: mediumslateblue;
+}

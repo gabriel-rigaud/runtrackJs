@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon bouton</title>
+</head>
+<body style="background-color: deepskyblue">
+<button id="afficher">Afficher Texte</button>
+<button id="cacher">Cacher Texte</button>
+<p id="text" style="display: none;">Les logiciels et les cathédrales, c'est un peu la même chose - d'abord on les construit, ensuite on prie.</p>
+
+<script>
+    document.querySelector("#afficher").addEventListener("click", function(){
+        document.querySelector("#text").style.display = "block";
+    });
+    document.querySelector("#cacher").addEventListener("click", function(){
+        document.querySelector("#text").style.display = "none";
+    });
+</script>
+</body>
+</html>
