@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="background: cadetblue">
+<form id="filter-form">
+    <label>Id : <input type="text" id="filter-id"></label>
+    <label>Nom : <input type="text" id="filter-name"></label>
+    <label>Type :
+        <select id="filter-type">
+            <option value="">Tous</option>
+            <option value="Type1">Type 1</option>
+            <option value="Type2">Type 2</option>
+            <option value="Type3">Type 3</option>
+        </select>
+    </label>
+    <input type="button" value="Filtrer" onclick="filterData()">
+</form>
+
+<div id="result"></div>
+
+<script>
+    function filterData() {
+        // Récupérez les valeurs des champs de filtrage
+        const filterId = document.getElementById("filter-id").value;
+        const filterName = document.getElementById("filter-name").value;
+        const filterType = document.getElementById("filter-type").value;
+
+        // Utilisez fetch pour récupérer le contenu du fichier
+        fetch("pokemon.json")
+            .then(response => response.json())
+            .then(data => {
+                // Filtrez les données en fonction des champs de filtrage
+                const filteredData = data.filter(item => {
+                    if (filterId && item.id.toString() !== filterId) {
+                        return false;
+                    }
+                    if (filterName && !Object.values(item.name).some(name => name.toLowerCase().includes(filterName.toLowerCase()))) {
+                        return false;
+                    }
+                    if (filterType && !item.type.includes(filterType)) {
+                        return false;
+                    }
+                    return true;
+                });
+
+                // Affichez les données filtrées dans le div de résultat
+                const resultDiv = document.getElementById("result");
+                resultDiv.innerHTML = "";
+                filteredData.forEach(item => {
+                    const p = document.createElement("p");
+                    // Utilisez JSON.stringify pour convertir l'objet "name" en chaîne de caractères
+                    p.textContent = `Id : ${item.id} | Nom : ${JSON.stringify(item.name)} | Type : ${item.type}`;
+                    resultDiv.appendChild(p);
+                });
+            });
+    }
+</script>
+</body>
+</html>

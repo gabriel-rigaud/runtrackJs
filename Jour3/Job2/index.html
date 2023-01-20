@@ -7,16 +7,20 @@
 </head>
 <body>
 <h1 class="title">Reconstitution de l'arc-en-ciel</h1>
-<button id="melange">Mélanger</button>
-<div id="conteneur">
-    <img src="img/arc1.png" id="arc1" class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="img/arc2.png" id="arc2" class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="img/arc3.png" id="arc3" class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="img/arc4.png" id="arc4" class="container" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="img/arc5.png" id="arc5" class="arc" draggable="true" ondragstart="drag(event)">
-    <img src="img/arc6.png" id="arc6" class="arc" draggable="true" ondragstart="drag(event)">
+<br>
+<div class="conteneur" id="droite" onDragStart="start(event)">
+    <img src="img/arc1.png" id="1" draggable="true"/>
+    <img src="img/arc2.png" id="2" draggable="true"/>
+    <img src="img/arc3.png" id="3" draggable="true"/>
+    <img src="img/arc4.png" id="4" draggable="true"/>
+    <img src="img/arc5.png" id="5" draggable="true"/>
+    <img src="img/arc6.png" id="6" draggable="true"/>
 </div>
-<div id="resultat"></div>
+<br><br>
+<div class="conteneur" id="gauche" onDragOver="return over(event)" onDrop="return drop(event)">
+
+</div>
+
 
 <script src="app.js"></script>
 </body>

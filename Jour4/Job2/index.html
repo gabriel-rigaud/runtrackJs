@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Afficher l'expression</title>
+</head>
+<body>
+<button id="button">Afficher l'expression</button>
+
+<script>
+    // Récupérez le bouton en utilisant son id
+    const button = document.getElementById("button");
+
+    // Ajoutez un écouteur d'événement click au bouton
+    button.addEventListener("click", async () => {
+        // Utilisez fetch pour récupérer le contenu du fichier texte
+        const response = await fetch("expression.txt");
+        const data = await response.text();
+
+        // Créez un paragraphe pour afficher le contenu
+        const p = document.createElement("p");
+        p.textContent = data;
+
+        // Insérez le paragraphe dans le corps de la page
+        document.body.appendChild(p);
+    });
+</script>
+
+</body>
+</html>

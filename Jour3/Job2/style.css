@@ -14,30 +14,28 @@ body{
     padding: 30px;
 }
 
-#conteneur{
-    display: flex;
+.conteneur{
+    display: inline-block;
+    background-color: grey;
+
 }
 
-#conteneur img{
-    /*width: 100px;*/
-    /*height: 100px;*/
+.conteneur img{
+    width: 100px;
     object-fit: cover;
-    margin: 10px;
 }
 
-#resultat{
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 10px;
+#droite{
+    float: left;
+}
+#gauche{
+    margin-top: -36px;
+    border: 10rem solid grey;
+}
+#gauche:start{
+    /*border: 0 solid black;*/
 }
 
-#resultat.gagne{
-    color: green;
-}
-
-#resultat.perdu{
-    color: red;
-}
 
 ::selection{
     background-color: black;

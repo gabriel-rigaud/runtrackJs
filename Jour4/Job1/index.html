@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    function jsonValueKey(jsonString, key) {
+        // Parsez la chaîne JSON en objet javascript
+        const jsonObject = JSON.parse(jsonString);
+
+        // Retournez la valeur liée à la clé
+        return jsonObject[key];
+    }
+    const jsonString = '{"name": "La Plateforme_","address": "8 rue d\'hozier","city": "Marseille","nb_staff": "11","creation":"2019"}';
+    console.log(jsonValueKey(jsonString, "city")); // "Marseille"
+    console.log(jsonValueKey(jsonString, "creation")); // "2019"
+
+</script>
+
+</body>
+</html>
