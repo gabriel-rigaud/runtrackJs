@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-blue-500 text-white p-4 flex justify-center items-center">
+  <h1>My Site</h1>
+</header>
+<body>
+<section class="bg-gray-200 p-4">
+  <form class="bg-white p-6 rounded-lg">
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2">Civilité</label>
+      <div class="flex items-center">
+        <input type="radio" name="gender" value="male" class="form-radio mr-2">
+        <label>Homme</label>
+      </div>
+
+      <div class="flex items-center">
+        <input type="radio" name="gender" value="female" class="mr-2">
+        <label class="text-gray-700">Femme</label>
+      </div>
+
+      <div class="flex items-center">
+        <input type="radio" name="gender" value="jsp" class="mr-2">
+        <label class="text-gray-700">Je Sais Pas</label>
+      </div>
+
+      <div class="my-2">
+        <label class="block text-gray-700 font-medium mb-2">Prénom</label>
+        <input type="text" name="firstname" class="w-full border border-gray-400 p-2 rounded-lg">
+      </div>
+
+      <div class="my-2">
+        <label class="block text-gray-700 font-medium mb-2">Nom</label>
+        <input type="text" name="lastname" class="w-full border border-gray-400 p-2 rounded-lg">
+      </div>
+
+      <div class="my-2">
+        <label class="block text-gray-700 font-medium mb-2">Adresse</label>
+        <input type="text" name="address" class="w-full border border-gray-400 p-2 rounded-lg">
+      </div>
+
+      <div class="my-2">
+        <label class="block text-gray-700 font-medium mb-2">Adresse Email</label>
+        <input type="email" name="email" class="w-full border border-gray-400 p-2 rounded-lg">
+      </div>
+
+      <div class="my-2">
+        <label class="block text-gray-700 font-medium mb-2">Mot de Passe</label>
+        <input type="password" name="password" class="w-full border border-gray-400 p-2 rounded-lg">
+      </div>
+
+      <div class="my-2">
+        <label class="block text-gray-700 font-medium mb-2">Confirmer Mot de Passe</label>
+        <input type="password" name="password_confirmation" class="w-full border border-gray-400 p-2 rounded-lg">
+      </div>
+
+      <div class="my-2">
+        <label>Passions:</label>
+        <input type="checkbox" name="passions[]" value="informatique" class="ml-2"> Informatique
+        <input type="checkbox" name="passions[]" value="voyages" class="ml-2"> Voyages
+        <input type="checkbox" name="passions[]" value="sport" class="ml-2"> Sport
+        <input type="checkbox" name="passions[]" value="lecture" class="ml-2"> Lecture
+      </div>
+
+      <div class="my-2">
+        <button class="bg-indigo-500 text-white p-2 rounded-lg hover:bg-indigo-600">Créer Compte</button>
+      </div>
+    </div>
+  </form>
+</section>
+</body>
+<footer>
+  <div>
+    <a href="#">Accueil</a>
+    <a href="#">Inscription</a>
+    <a href="#">Connexion</a>
+    <a href="#">Rechercher</a>
+  </div>
+</footer>
+</html>
